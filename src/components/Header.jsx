@@ -15,7 +15,7 @@ const Header = ({ text, bgColor, textColor }) => {
   );
 };
 
-// Setting default props and personal Proptypes for practice / understanding
+// Setting default props and Proptypes for practice / understanding
 
 Header.defaultProps = {
   text: 'Feedback App',
