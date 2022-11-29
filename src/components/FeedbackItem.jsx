@@ -2,10 +2,9 @@ import { FaTimes } from 'react-icons/fa';
 import Card from './shared/Card';
 import { PropTypes } from 'prop-types';
 
-const FeedbackItem = ({ item, handleDelete }) => {
+const FeedbackItem = ({ item, handleDelete, reverse }) => {
   return (
-    // conditional to make every other card have reverse set to true, for styling purposes
-    <Card reverse={item.id % 2 === 0 ? true : false}>
+    <Card reverse={reverse}>
       <div className='num-display'>{item.rating}</div>
       <button onClick={() => handleDelete(item.id)} className='close'>
         <FaTimes color='purple' />

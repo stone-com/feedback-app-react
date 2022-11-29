@@ -7,8 +7,14 @@ const FeedbackList = ({ feedback, handleDelete }) => {
   }
   return (
     <div className='feedback-list'>
-      {feedback.map((item) => (
-        <FeedbackItem key={item.id} item={item} handleDelete={handleDelete} />
+      {feedback.map((item, index) => (
+        <FeedbackItem
+          key={item.id}
+          item={item}
+          handleDelete={handleDelete}
+          // conditional to make every other card have reverse set to true, for styling purposes
+          reverse={index % 2 === 0 ? false : true}
+        />
       ))}
     </div>
   );
