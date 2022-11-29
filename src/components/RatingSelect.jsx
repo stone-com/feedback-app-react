@@ -1,4 +1,5 @@
 const RatingSelect = ({ setRating, selected }) => {
+
   const handleChange = (e) => {
     // use + (unary plus operator) to convert e target value string to a number
     setRating(+e.target.value);
