@@ -1,7 +1,10 @@
 import FeedbackItem from './FeedbackItem';
-import { PropTypes } from 'prop-types';
+import { useContext } from 'react';
+import FeedbackContext from '../context/FeedbackContext';
 
-const FeedbackList = ({ feedback, handleDelete }) => {
+const FeedbackList = () => {
+  const { feedback} = useContext(FeedbackContext);
+
   if (!feedback || feedback.length === 0) {
     return <p>No Feedback yet!</p>;
   }
@@ -11,7 +14,6 @@ const FeedbackList = ({ feedback, handleDelete }) => {
         <FeedbackItem
           key={item.id}
           item={item}
-          handleDelete={handleDelete}
           // conditional to make every other card have reverse set to true, for styling purposes
           reverse={index % 2 === 0 ? false : true}
         />
@@ -20,15 +22,4 @@ const FeedbackList = ({ feedback, handleDelete }) => {
   );
 };
 
-// Setting Proptypes for practice
-// Checking that the feedback prop is an array of objects containing id, text, and rating
-FeedbackList.propTypes = {
-  feedback: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-      rating: PropTypes.number.isRequired,
-    })
-  ),
-};
 export default FeedbackList;
