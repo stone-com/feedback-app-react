@@ -6,19 +6,19 @@
       "text": "This is feedback item 1 from JSON Server"
     },
     {
-      "id": 2,
-      "rating": 3,
-      "text": "This is feedback item 2 from JSON Server"
-    },
-    {
-      "id": 3,
-      "rating": 6,
-      "text": "This is feedback item 3 from JSON Server"
+      "text": "This is feedback item UPDATEDDDDD",
+      "rating": 10,
+      "id": 3
     },
     {
       "text": "This is a dope ass new review!",
       "rating": 4,
       "id": 4
+    },
+    {
+      "text": "haha what the hell!",
+      "rating": 3,
+      "id": 5
     }
   ]
 }
